@@ -21,6 +21,7 @@ export default function TabLayout() {
         name="index"
         options={{
           title: "Home",
+          headerTitleAlign: "center",
           tabBarIcon: ({ color, focused }) => (
             <Ionicons
               name={focused ? "home-sharp" : "home-outline"}
@@ -34,6 +35,7 @@ export default function TabLayout() {
         name="profile"
         options={{
           title: "About",
+          headerTitleAlign: "center",
           tabBarIcon: ({ color, focused }) => (
             <Ionicons
               name={

@@ -1,21 +1,21 @@
-import { StyleSheet, Text, View } from "react-native";
+import { Stack } from "expo-router";
 
-export default function AboutScreen() {
+export default function ProfileLayout() {
   return (
-    <View style={styles.container}>
-      <Text style={styles.text}>About screen</Text>
-    </View>
+    <Stack>
+      <Stack.Screen name="index" options={{ headerShown: false }} />
+      <Stack.Screen
+        name="[id]"
+        options={{
+          title: "Employee Details",
+          headerStyle: {
+            backgroundColor: "#25292e",
+          },
+          headerShadowVisible: false,
+          headerTintColor: "#fff",
+          headerTitleAlign: "center",
+        }}
+      />
+    </Stack>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#25292e",
-    justifyContent: "center",
-    alignItems: "center",
-  },
-  text: {
-    color: "#fff",
-  },
-});
